@@ -4,7 +4,7 @@
       <router-link to="/">Modal</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <transition name="fade">
+    <transition name="fade" mode="out-in">
      <router-view />
     </transition>
   </div>
