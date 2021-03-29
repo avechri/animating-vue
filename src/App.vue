@@ -5,7 +5,7 @@
       <router-link to="/list">List</router-link>
     </div>
     <transition name="slide-fade" mode="out-in">
-     <router-view />
+     <router-view/>
     </transition>
   </div>
 </template>
@@ -95,5 +95,14 @@ ul {
 .slide-fade-leave-to {
   transform: translateX(-10px);
   opacity: 0;
+}
+
+.slide-up-enter {
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.slide-up-enter-active {
+  transition: all 0.2s ease;
 }
 </style>

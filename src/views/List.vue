@@ -1,13 +1,13 @@
 <template>
   <div>
-    <input type="text" v-model="newContact" placeholder="Name" />
+    <input type="text" v-model="newContact" placeholder="Name"/>
     <button @click="addContact">Add Contact</button>
 
-    <ul>
+    <transition-group name="slide-up" tag="ul" appear>
       <li v-for="contact in contacts" :key="contact">
         {{ contact }}
       </li>
-    </ul>
+    </transition-group>
   </div>
 </template>
 
