@@ -4,7 +4,7 @@
       <router-link to="/">Modal</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <transition name="fade" mode="out-in">
+    <transition name="slide-fade" mode="out-in">
      <router-view />
     </transition>
   </div>
@@ -65,6 +65,21 @@ button {
 }
 
 .fade-leave-to {
+  opacity: 0;
+}
+
+.slide-fade-enter {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 0.2s ease;
+}
+
+.slide-fade-leave-to {
+  transform: translateX(-10px);
   opacity: 0;
 }
 </style>
