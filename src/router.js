@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Modal from './views/Home.vue'
+import Modal from './views/Modal.vue'
 
 Vue.use(Router)
 
