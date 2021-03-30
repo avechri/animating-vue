@@ -3,21 +3,52 @@
     <button @click="isOpen = !isOpen">
       My Profile
     </button>
-    <div v-if="isOpen" class="drawer">
-      <img src="../assets/avatar.png" alt="avatar" />
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
+    <transition
+      @before-enter="beforeEnter"
+      @enter="enter"
+      @leave="leave"
+      :css="false"
+    >
+      <div v-if="isOpen" class="drawer">
+        <img src="../assets/avatar.png" alt="avatar" />
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </transition>
   </div>
 </template>
 
 <script>
+import Velocity from 'velocity-animate'
+
 export default {
   data() {
     return {
       isOpen: false
+    }
+  },
+  methods: {
+    beforeEnter(el) {
+      el.style.opacity = 0
+      el.style.width = '0em'
+    },
+    enter(el, done) {
+      Velocity(
+        //element to animate is below
+        el,
+        { opacity: 1, width: '12em' },
+        // callback 'done' shows to Vue that we're done with this lifecycle and ready to move on
+        { duration: 1000, easing: [100, 5], complete: done }
+      )
+    },
+    leave(el, done) {
+      Velocity(
+        el,
+        { opacity: 0, width: '0em' },
+        { duration: 500, easing: 'easyInCubic', complete: done }
+      )
     }
   }
 }
