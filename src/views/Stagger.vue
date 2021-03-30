@@ -26,7 +26,10 @@ export default {
       scale: 0,
       y: 200,
       ease: 'power1',
-      stagger: 0.1
+      stagger: {
+        each: 0.1,
+        from: 'edges'
+      }
     })
   }
 }
