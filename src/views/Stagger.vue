@@ -28,7 +28,7 @@ export default {
       ease: 'power1',
       stagger: {
         each: 0.1,
-        from: 'edges'
+        from: 'center'
       }
     })
   }
