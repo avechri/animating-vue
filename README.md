@@ -1,29 +1,13 @@
 # animating-vue
 
-## Project setup
-```
-npm install
-```
+## О проекте
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Этот проект я делала в рамках курса Vue Mastery: Animating Vue.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Я научилась: 
 
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- узнала о том, что такое transitions, как и почему их нужно использовать
+- сделала первые простые анимации
+- познакомилась с [Velocity](http://velocityjs.org/)
+- познакомилась с [GSAP](https://greensock.com/gsap/) 
+- научилась делать простые анимации, используя GSAP
